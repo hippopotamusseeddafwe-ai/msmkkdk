@@ -1,0 +1,205 @@
+import { BackgroundSettings, BackgroundPresetId, BackgroundPattern } from '../types';
+
+export interface BackgroundPresetDefinition {
+  id: BackgroundPresetId;
+  name: string;
+  category: string;
+  description: string;
+  previewGradient: string;
+  settings: BackgroundSettings;
+}
+
+export const DEFAULT_BACKGROUND_SETTINGS: BackgroundSettings = {
+  preset: 'cosmic',
+  primaryColor: '#0f082e', // Deep galactic violet-indigo
+  secondaryColor: '#2c1266', // Luminous cosmic purple
+  accentColor: '#a855f7', // Bright purple aurora accent
+  darkness: 25, // 25% subtle tint
+  pattern: 'dots',
+  particles: 'high',
+  glowIntensity: 85,
+  animated: true,
+};
+
+export const BACKGROUND_PRESETS: BackgroundPresetDefinition[] = [
+  {
+    id: 'cosmic',
+    name: 'Cosmic Nebula',
+    category: 'Astral',
+    description: 'Deep starlit space with swirling violet nebula dust & shimmering stars.',
+    previewGradient: 'linear-gradient(135deg, #0f082e 0%, #2c1266 50%, #a855f7 100%)',
+    settings: {
+      preset: 'cosmic',
+      primaryColor: '#0f082e',
+      secondaryColor: '#2c1266',
+      accentColor: '#a855f7',
+      darkness: 25,
+      pattern: 'dots',
+      particles: 'high',
+      glowIntensity: 85,
+      animated: true,
+    },
+  },
+  {
+    id: 'cyberpunk',
+    name: 'Cyber Synthwave',
+    category: 'Digital',
+    description: 'Retro-futuristic neon magenta and cyan grid with pulsing scanlines.',
+    previewGradient: 'linear-gradient(135deg, #160426 0%, #450a5f 50%, #ec4899 100%)',
+    settings: {
+      preset: 'cyberpunk',
+      primaryColor: '#160426',
+      secondaryColor: '#450a5f',
+      accentColor: '#f43f5e',
+      darkness: 22,
+      pattern: 'grid',
+      particles: 'high',
+      glowIntensity: 90,
+      animated: true,
+    },
+  },
+  {
+    id: 'abyss',
+    name: 'Abyssal Trench',
+    category: 'Oceanic',
+    description: 'Bioluminescent deep ocean trench with glowing cyan & teal aquatic waves.',
+    previewGradient: 'linear-gradient(135deg, #031726 0%, #073859 50%, #06b6d4 100%)',
+    settings: {
+      preset: 'abyss',
+      primaryColor: '#031726',
+      secondaryColor: '#073859',
+      accentColor: '#06b6d4',
+      darkness: 25,
+      pattern: 'dots',
+      particles: 'medium',
+      glowIntensity: 85,
+      animated: true,
+    },
+  },
+  {
+    id: 'solar',
+    name: 'Solar Flare',
+    category: 'Elemental',
+    description: 'Molten stellar core with volcanic ember sparks and blazing solar corona.',
+    previewGradient: 'linear-gradient(135deg, #240703 0%, #5e1509 50%, #f97316 100%)',
+    settings: {
+      preset: 'solar',
+      primaryColor: '#240703',
+      secondaryColor: '#5e1509',
+      accentColor: '#f97316',
+      darkness: 22,
+      pattern: 'stars',
+      particles: 'high',
+      glowIntensity: 90,
+      animated: true,
+    },
+  },
+  {
+    id: 'matrix',
+    name: 'Emerald Matrix',
+    category: 'Digital',
+    description: 'Digital cybernetic terminal with falling jade phosphor & matrix grids.',
+    previewGradient: 'linear-gradient(135deg, #021a0c 0%, #064d26 50%, #10b981 100%)',
+    settings: {
+      preset: 'matrix',
+      primaryColor: '#021a0c',
+      secondaryColor: '#064d26',
+      accentColor: '#10b981',
+      darkness: 25,
+      pattern: 'hex',
+      particles: 'high',
+      glowIntensity: 85,
+      animated: true,
+    },
+  },
+  {
+    id: 'amethyst',
+    name: 'Amethyst Void',
+    category: 'Mystic',
+    description: 'Royal dark crystalline chamber with radiating amethyst crystal pulses.',
+    previewGradient: 'linear-gradient(135deg, #18042b 0%, #3f0c6b 50%, #c084fc 100%)',
+    settings: {
+      preset: 'amethyst',
+      primaryColor: '#18042b',
+      secondaryColor: '#3f0c6b',
+      accentColor: '#c084fc',
+      darkness: 24,
+      pattern: 'dots',
+      particles: 'medium',
+      glowIntensity: 85,
+      animated: true,
+    },
+  },
+  {
+    id: 'astral',
+    name: 'Prismatic Astral',
+    category: 'Astral',
+    description: 'Transcendent chromatic rift with iridescent color shifting aura streams.',
+    previewGradient: 'linear-gradient(135deg, #0e0d36 0%, #29166f 40%, #06b6d4 75%, #ec4899 100%)',
+    settings: {
+      preset: 'astral',
+      primaryColor: '#0e0d36',
+      secondaryColor: '#29166f',
+      accentColor: '#38bdf8',
+      darkness: 20,
+      pattern: 'stars',
+      particles: 'high',
+      glowIntensity: 95,
+      animated: true,
+    },
+  },
+  {
+    id: 'bloodmoon',
+    name: 'Blood Moon Eclipse',
+    category: 'Mystic',
+    description: 'Ominous crimson moonlight with floating obsidian ashes & eclipse aura.',
+    previewGradient: 'linear-gradient(135deg, #24040c 0%, #54081c 50%, #ef4444 100%)',
+    settings: {
+      preset: 'bloodmoon',
+      primaryColor: '#24040c',
+      secondaryColor: '#54081c',
+      accentColor: '#ef4444',
+      darkness: 24,
+      pattern: 'dots',
+      particles: 'medium',
+      glowIntensity: 85,
+      animated: true,
+    },
+  },
+  {
+    id: 'zenith',
+    name: 'Imperial Zenith',
+    category: 'Luxe',
+    description: 'Glorious celestial gold & topaz kingdom with radiant sunbeams.',
+    previewGradient: 'linear-gradient(135deg, #1c1502 0%, #4a3706 50%, #eab308 100%)',
+    settings: {
+      preset: 'zenith',
+      primaryColor: '#1c1502',
+      secondaryColor: '#4a3706',
+      accentColor: '#eab308',
+      darkness: 22,
+      pattern: 'stars',
+      particles: 'medium',
+      glowIntensity: 90,
+      animated: true,
+    },
+  },
+  {
+    id: 'carbon',
+    name: 'Stealth Obsidian',
+    category: 'Minimal',
+    description: 'Sleek carbon dark matte with refined monochrome stardust highlights.',
+    previewGradient: 'linear-gradient(135deg, #0c0c0e 0%, #202024 50%, #94a3b8 100%)',
+    settings: {
+      preset: 'carbon',
+      primaryColor: '#0c0c0e',
+      secondaryColor: '#202024',
+      accentColor: '#94a3b8',
+      darkness: 35,
+      pattern: 'grid',
+      particles: 'low',
+      glowIntensity: 60,
+      animated: true,
+    },
+  },
+];

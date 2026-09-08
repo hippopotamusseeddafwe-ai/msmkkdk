@@ -1,0 +1,6 @@
+{
+  "name": "RNG Realm - Rarity Roller",
+  "description": "An interactive RNG rarity roller game featuring 101 rarity tiers (30,000 items total, including 10,000 secret Nani Singh items unlocked at Rebirth 100 with complete Dex), roll money multipliers across all rarities, Rebirth 15 Too Much perk (Sikh to Nani transmutation), Rebirth 5 Lucky Duck perk, real-time synchronized Firebase multiplayer Aura Duel arenas, interactive online trading system with bot merchants and fair trade evaluation, real-time leaderboard, 100 Rebirth unlocks, Merge Machine duplicate transmutation, dynamic canvas visualizers, and performance-optimized rendering across mobile phones, tablets, and desktop computers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

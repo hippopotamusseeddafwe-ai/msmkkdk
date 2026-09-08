@@ -1,0 +1,163 @@
+{
+  "entities": {
+    "LeaderboardEntry": {
+      "title": "LeaderboardEntry",
+      "description": "Global player statistics and ranking entry",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "avatarIcon": { "type": "string" },
+        "title": { "type": "string" },
+        "totalRolls": { "type": "number" },
+        "rebirthLevel": { "type": "number" },
+        "rollsEarned": { "type": "number" },
+        "highestRarity": { "type": "string" },
+        "highestRarityRank": { "type": "number" },
+        "bestItemName": { "type": "string" },
+        "bestItemRarity": { "type": "string" },
+        "bestItemChance": { "type": "string" },
+        "equippedItemName": { "type": "string" },
+        "equippedItemRarity": { "type": "string" },
+        "inventoryCount": { "type": "number" },
+        "achievementsCount": { "type": "number" },
+        "lastActive": { "type": "number" }
+      },
+      "required": ["id", "name", "totalRolls", "lastActive"]
+    },
+    "GlobalRollEvent": {
+      "title": "GlobalRollEvent",
+      "description": "Live broadcasted high-tier rare aura drop event",
+      "type": "object",
+      "properties": {
+        "playerId": { "type": "string" },
+        "playerName": { "type": "string" },
+        "playerAvatar": { "type": "string" },
+        "itemId": { "type": "string" },
+        "itemName": { "type": "string" },
+        "itemRarity": { "type": "string" },
+        "itemChance": { "type": "string" },
+        "timestamp": { "type": "number" }
+      },
+      "required": ["playerId", "playerName", "itemName", "itemRarity", "timestamp"]
+    },
+    "AuraDuelRoom": {
+      "title": "AuraDuelRoom",
+      "description": "Real-time multiplayer blind aura clash room",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "roomCode": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" },
+        "hostPlayerId": { "type": "string" },
+        "hostName": { "type": "string" },
+        "hostAvatar": { "type": "string" },
+        "hostTitle": { "type": "string" },
+        "hostHasLocked": { "type": "boolean" },
+        "hostAuraId": { "type": "string" },
+        "hostAuraName": { "type": "string" },
+        "hostAuraRarity": { "type": "string" },
+        "hostAuraRank": { "type": "number" },
+        "hostAuraChance": { "type": "string" },
+        "hostBestAuraId": { "type": "string" },
+        "hostBestAuraName": { "type": "string" },
+        "hostBestAuraRarity": { "type": "string" },
+        "guestPlayerId": { "type": "string" },
+        "guestName": { "type": "string" },
+        "guestAvatar": { "type": "string" },
+        "guestTitle": { "type": "string" },
+        "guestHasLocked": { "type": "boolean" },
+        "guestAuraId": { "type": "string" },
+        "guestAuraName": { "type": "string" },
+        "guestAuraRarity": { "type": "string" },
+        "guestAuraRank": { "type": "number" },
+        "guestAuraChance": { "type": "string" },
+        "guestBestAuraId": { "type": "string" },
+        "guestBestAuraName": { "type": "string" },
+        "guestBestAuraRarity": { "type": "string" },
+        "winnerPlayerId": { "type": "string" },
+        "loserPlayerId": { "type": "string" },
+        "transferredAuraId": { "type": "string" },
+        "transferredAuraName": { "type": "string" },
+        "transferredAuraRarity": { "type": "string" },
+        "isDraw": { "type": "boolean" },
+        "lastEmote": { "type": "string" },
+        "lastEmotePlayer": { "type": "string" }
+      },
+      "required": ["id", "roomCode", "status", "hostPlayerId", "createdAt"]
+    },
+    "TradeRoom": {
+      "title": "TradeRoom",
+      "description": "Multiplayer real-time aura and item trading room",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "roomCode": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" },
+        "hostPlayerId": { "type": "string" },
+        "hostName": { "type": "string" },
+        "hostAvatar": { "type": "string" },
+        "hostTitle": { "type": "string" },
+        "hostOffersJson": { "type": "string" },
+        "hostIsLocked": { "type": "boolean" },
+        "hostIsAccepted": { "type": "boolean" },
+        "guestPlayerId": { "type": "string" },
+        "guestName": { "type": "string" },
+        "guestAvatar": { "type": "string" },
+        "guestTitle": { "type": "string" },
+        "guestOffersJson": { "type": "string" },
+        "guestIsLocked": { "type": "boolean" },
+        "guestIsAccepted": { "type": "boolean" },
+        "completedSummary": { "type": "string" },
+        "lastEmote": { "type": "string" },
+        "lastEmotePlayer": { "type": "string" }
+      },
+      "required": ["id", "roomCode", "status", "hostPlayerId", "createdAt"]
+    },
+    "UserProgress": {
+      "title": "UserProgress",
+      "description": "Authenticated player cloud saved game state and profile",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "gameState": { "type": "object" },
+        "playerProfile": { "type": "object" },
+        "totalRolls": { "type": "number" },
+        "rebirthLevel": { "type": "number" },
+        "rolls": { "type": "number" },
+        "essence": { "type": "number" },
+        "lastSavedAt": { "type": "number" }
+      },
+      "required": ["userId", "lastSavedAt"]
+    }
+  },
+  "firestore": {
+    "/user_progress/{userId}": {
+      "schema": "UserProgress",
+      "description": "Secure persistent player save slot synchronized across devices"
+    },
+    "/leaderboard/{playerId}": {
+      "schema": "LeaderboardEntry",
+      "description": "Public real-time leaderboard statistics for each player"
+    },
+    "/recent_global_rolls/{rollId}": {
+      "schema": "GlobalRollEvent",
+      "description": "Live global roll drops feed"
+    },
+    "/aura_duels/{duelId}": {
+      "schema": "AuraDuelRoom",
+      "description": "Multiplayer blind aura clash duel rooms"
+    },
+    "/trades/{tradeId}": {
+      "schema": "TradeRoom",
+      "description": "Multiplayer real-time aura and item trading rooms"
+    }
+  }
+}
